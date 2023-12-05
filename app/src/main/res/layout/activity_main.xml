@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gz"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/quest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_tasks_true"
+            android:gravity="center"
+            android:text="任务"
+            android:textColor="@color/colorPrimary" />
+
+
+        <TextView
+            android:id="@+id/rewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_rewards_false"
+            android:gravity="center"
+            android:text="奖励"
+            android:textColor="@color/textColor" />
+        <TextView
+            android:id="@+id/statistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_statistics_false"
+            android:gravity="center"
+            android:text="统计"
+            android:visibility="gone"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:id="@+id/mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/ic_mine_false"
+            android:gravity="center"
+            android:text="我"
+            android:textColor="@color/textColor" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@color/line_main" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_layout"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
